@@ -1,0 +1,9 @@
+module.exports = (key) => {
+    return Object.freeze({
+        decrypt: (ciphertext, nonce) => {
+            if (key === "" ) {
+                throw  new Error("no key")}
+            return sodium.crypto_secretbox_open_easy(ciphertext, nonce, key);
+        }
+    })
+}
