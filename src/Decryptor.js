@@ -5,7 +5,7 @@ module.exports = (key) => {
     return Object.freeze({
         
         decrypt: (ciphertext, nonce) => {
-            console.log(key);
+            
             
             return nacl.crypto_secretbox_open_easy(ciphertext, nonce, key);
         }
