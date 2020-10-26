@@ -29,7 +29,7 @@ module.exports	= async (peer =null) => {
         secureSessPeer = sess;
     }
     tempobj.encrypt = (msg) =>{
-        const nonce = nacl2.randombytes_buf(nacl2.crypto_secretbox_NONCEBYTES);
+            const nonce = nacl2.randombytes_buf(nacl2.crypto_secretbox_NONCEBYTES);
             const ciphertext = encrypt.encrypt(msg,nonce);
             return {ciphertext,nonce};
     }
@@ -64,7 +64,7 @@ module.exports	= async (peer =null) => {
     }
 
     
-    return Object.freeze(tempobj)
+    return Object.freeze(tempobj);
 
 }
 
